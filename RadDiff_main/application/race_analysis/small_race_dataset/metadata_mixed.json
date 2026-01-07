@@ -1,0 +1,27 @@
+{
+  "dataset_type": "mixed",
+  "races": [
+    "White",
+    "Black",
+    "Asian"
+  ],
+  "race_to_label": {
+    "White": 0,
+    "Black": 1,
+    "Asian": 2
+  },
+  "total_images": 270360,
+  "race_distribution": {
+    "White": 207381,
+    "Black": 52599,
+    "Asian": 10380
+  },
+  "train_size": 15000,
+  "val_size": 3000,
+  "filters": {
+    "view_positions": "all",
+    "max_samples_per_race": null
+  },
+  "random_seed": 42,
+  "note": "Small subset for quick training"
+}

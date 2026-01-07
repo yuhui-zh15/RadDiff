@@ -1,0 +1,15 @@
+{
+  "best_val_acc": 75.33333333333333,
+  "total_images": 18000,
+  "high_confidence_threshold": 0.95,
+  "high_confidence_counts": {
+    "Asian": 1000,
+    "Black": 1000,
+    "White": 662
+  },
+  "mean_confidence_per_race": {
+    "Asian": 0.9823536796569824,
+    "Black": 0.9804683529734611,
+    "White": 0.9693929030816001
+  }
+}

@@ -1,0 +1,8 @@
+project: RadDiffBench_example
+seed: 0  # random seed
+
+data:
+  name: PairedImageSets_filtered_negation_fixed
+  group1: "moderate right pleural effusion "
+  group2: "no pleural effusion "
+  purity: 1.0

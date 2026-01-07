@@ -1,0 +1,132 @@
+project: RadDiff
+wandb: true  # whether to log to wandb
+seed: 0  # random seed
+num_iterations: 2 # number of iterations to run the process for
+merge: false  # whether to merge and rank hypotheses from all previous iterations together - decided not to
+
+
+data:
+  root: ./RadDiffBench
+  name: RadDiffBench  # name of dataset
+  group1: "A"  # name of group 1
+  group2: "B"  # name of group 2
+  purity: 1.0  # how much of each concept is in each group (1.0 means perfect seperation, 0.5 means perfect mix)
+  subset: False  # if you want to use a subset of the dataset, set this to name of the desired subset value
+
+
+
+captioner:
+  model: chexagent  # model used in method
+  prompt: "CHEXAGENT_PROMPT" # prompt to use
+
+# captioner:
+#   model: blip  # model used in method
+#   prompt: "Describe this image in detail."  # prompt to use
+
+
+#### Raddiff
+proposer:  # VLM AND LLM Proposer
+  method: VLMANDLLMProposer  # how to propose hypotheses
+  model: gpt-4.1-nano  # model used in method gpt-4.1-nano gpt-4.1-mini
+  num_rounds: 3  # number of rounds to propose
+  num_samples: 20  # number of samples per group to use
+  sampling_method: random  # how to sample
+  num_hypotheses: 10  # number of hypotheses to generate per round
+  prompt: META_V3_CAPTIONS_V5_EVEN_LESS_BIAS_BOTH # prompt to use
+  topk: 5 # number of top differences from last round to feed into next round, for iterative process
+  iterative_cropping: True
+
+
+# visdiff
+# proposer:  # LLM Proposer
+#   method: LLMProposer  # how to propose hypotheses
+#   model: gpt-4.1-nano  # model used in method
+#   num_rounds: 3  # number of rounds to propose
+#   num_samples: 20  # number of samples per group to use
+#   sampling_method: random  # how to sample
+#   num_hypotheses: 10  # number of hypotheses to generate per round
+#   prompt: CLIP_FRIENDLY  # prompt to use
+
+
+# domain prompt
+# proposer:  # LLM Proposer
+#   method: LLMProposer  # how to propose hypotheses
+#   model: gpt-4.1-nano  # model used in method
+#   num_rounds: 3  # number of rounds to propose
+#   num_samples: 20  # number of samples per group to use
+#   sampling_method: random  # how to sample
+#   num_hypotheses: 10  # number of hypotheses to generate per round
+#   prompt: META_V3_CAPTIONS_V5_EVEN_LESS_BIAS  # prompt to use
+
+
+
+
+# proposer:  # Radiololgy Reports Upper Bound
+#   method: RadiologyReports  # how to propose hypotheses
+#   model: gpt-4.1-nano  # model used in method gpt-4.1-nano gpt-4.1-mini o4-mini
+#   num_rounds: 3  # number of rounds to propose
+#   num_samples: 20  # number of samples per group to use
+#   sampling_method: random  # how to sample
+#   num_hypotheses: 10  # number of hypotheses to generate per round
+#   prompt: META_V3_REPORTS_V5_EVEN_LESS_BIAS_BOTH 
+#   topk: 10 # number of top differences from last round to feed into next round, for iterative process
+#   summary: False      # use summary instead of full reports
+#   first_report: False   # whether to use full reports for first iteration when summary mode is enabled
+
+
+
+# proposer:  # LLM Proposer
+#   method: LLMProposer  # how to propose hypotheses
+#   model: gpt-4o-2024-05-13  # model used in method
+#   num_rounds: 3  # number of rounds to propose
+#   num_samples: 20  # number of samples per group to use
+#   sampling_method: random  # how to sample
+#   num_hypotheses: 10  # number of hypotheses to generate per round
+#   prompt: META_V2  # prompt to use
+
+
+
+
+
+
+# proposer:  # VLM Feature Proposer
+#   method: VLMFeatureProposer  # how to propose hypotheses
+#   num_rounds: 3  # number of rounds to propose
+#   num_samples: 20  # number of samples per group to use
+#   sampling_method: random  # how to sample
+#   num_hypotheses: 10  # number of hypotheses to generate per round
+
+
+
+ranker:  # CLIP Ranker
+  method: CLIPRanker  # how to rank hypotheses
+  clip_model: chexzero # clip model to use
+  clip_dataset: laion2b_s39b_b160k  # clip dataset to use
+  max_num_samples: 5000  # maximum number of samples to use
+  classify_threshold: 0.3  # threshold for clip classification
+
+
+
+# ranker:  # CLIP Ranker
+#   method: CLIPRanker  # how to rank hypotheses
+#   clip_model: ViT-bigG-14  # clip model to use
+#   clip_dataset: laion2b_s39b_b160k  # clip dataset to use
+#   max_num_samples: 5000  # maximum number of samples to use
+#   classify_threshold: 0.3  # threshold for clip classification
+
+# ranker:  # LLM Ranker
+#   method: LLMRanker  # how to rank hypotheses
+#   captioner_model: llava  # captioner to use
+#   captioner_prompt: "describe this image in detail."
+#   model: vicuna  # model used in method
+#   classify_threshold: 0.5  # threshold for clip classification
+
+# ranker:  # VLM Ranker
+#   method: VLMRanker  # how to rank hypotheses
+#   model: llava  # model used in method
+#   classify_threshold: 0.5  # threshold for clip classification
+
+evaluator:
+  method: GPTEvaluator  # how to evaluate hypotheses
+  model: gpt-4.1-nano   # model used in method
+  n_hypotheses: 100  # number of hypotheses to evaluate

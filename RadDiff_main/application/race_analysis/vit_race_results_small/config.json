@@ -1,0 +1,14 @@
+{
+  "data_dir": "small_race_dataset",
+  "dataset_type": "mixed",
+  "model": "deit_small_patch16_224",
+  "epochs": 3,
+  "batch_size": 64,
+  "lr": 5e-05,
+  "image_size": 224,
+  "num_workers": 4,
+  "confidence_threshold": 0.95,
+  "top_n": 1000,
+  "output_dir": "vit_race_results_small",
+  "timestamp": "2025-10-19T19:37:21.708702"
+}
