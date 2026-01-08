@@ -5,7 +5,7 @@
 [![Pytorch](https://img.shields.io/badge/Pytorch-2.1-red.svg)](https://pytorch.org/get-started/previous-versions/#v21)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-This repo provides the PyTorch source code of our paper: RadDiff: Describing Differences in Radiology Image Sets with Natural Language
+This repo provides the PyTorch source code of our paper: [RadDiff: Describing Differences in Radiology Image Sets with Natural Language](https://arxiv.org/abs/2601.03733).
 
 
 ## 🔮 Abstract
@@ -106,3 +106,15 @@ For each application, we provide the corresponding codes and usages in [applicat
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](RadDiff_main/LICENSE) file for details.
+
+## 🎯 Citation
+
+If you use this repo in your research, please cite it as follows:
+```
+@article{RadDiff,
+  title={RadDiff: Describing Differences in Radiology Image Sets with Natural Language},
+  author={Xiaoxian Shen and Yuhui Zhang and Sahithi Ankireddy and Xiaohan Wang and Maya Varma and Henry Guo and Curtis Langlotz and Serena Yeung-Levy},
+  journal={arXiv preprint arXiv:2601.03733},
+  year={2026}
+}
+```
