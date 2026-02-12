@@ -74,7 +74,7 @@ You can create your own config file similar to [raddiff_base.yaml](RadDiff_main/
 
 ### 📊 RadDiffBench
 
-To evaluate our system, we collected RadDiffBench, a benchmark of 57 expert-validated radiology study pairs with ground truth difference descriptions. The benchmark metadata can be found in [RadDiffBench file](RadDiff_main/RadDiffBench/RadDiffBench.csv).
+To evaluate our system, we collected RadDiffBench, a benchmark of 57 expert-validated radiology study pairs with ground truth difference descriptions. The benchmark metadata can be found in [RadDiffBench file](RadDiff_main/RadDiffBench/RadDiffBench.jsonl).
 
 To evaluate performance on RadDiffBench, we ask RadDiff to output a description for each paired set and compare it to the ground truth using [GPT-4.1-nano evaluator](RadDiff_main/components/evaluator.py).
 
@@ -82,6 +82,7 @@ To evaluate performance on RadDiffBench, we ask RadDiff to output a description 
 
 1. Download the MIMIC-CXR dataset from [PhysioNet](https://physionet.org/content/mimic-cxr/2.1.0/) (requires credentialed access)
 2. Update the data paths in your `.env` file to point to your MIMIC-CXR installation
+3. Change the file path prefix in the csv files accordingly to point to your MIMIC-CXR installation.
 
 #### Reproducing Paper Results
 

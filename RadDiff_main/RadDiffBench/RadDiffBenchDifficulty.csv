@@ -1,0 +1,58 @@
+index,condition_A,condition_B,usefulness,difficulty
+0,moderate right pleural effusion,no pleural effusion,3.0,2.0
+1,right subclavian central venous catheter present,no subclavian central venous catheter observe,3.0,1.0
+2,displace rib fracture,no displace rib fracture,3.0,3.0
+3,previously note pulmonary edema resolve,moderate pulmonary edema with slightly improve aeration,3.0,1.0
+4,mild to moderate cardiomegaly,"moderate cardiomegaly , mildly stable",3.0,1.0
+5,NG tube in bronchus,ng tube in stomach,3.0,1.0
+6,Hypoinflated lung with bilateral perihilar interstitial opacity,lung well inflate and clear,3.0,2.0
+7,stable airspace consolidation,worsen airspace consolidation,3.0,3.0
+8,unstable cardiomegaly with prominent pulmonary edema,stable cardiomegaly with no pulmonary edema,3.0,1.0
+9,abnormal chest radiograph,Normal chest radiograph,3.0,1.0
+10,bilateral small pleural effusion,no pleural effusion or pneumothorax,3.0,2.0
+11,Left apical pleural tube in place,no pleural tube,3.0,1.0
+12,enteric tube terminate below the diaphragm,no enteric tube,3.0,1.0
+13,small to moderate left pneumothorax,no pneumothorax,3.0,2.0
+14,poc catheter tip in the low SVC,poc catheter not visualize,3.0,1.0
+15,confluent left perihilar opacity,clear perihilar region,3.0,3.0
+16,bilateral pneumothorax,no pneumothorax,3.0,2.0
+17,heart size enlarge,Normal heart size,3.0,1.0
+18,Clear lung,diffuse interstitial opacity,3.0,2.0
+19,pneumonia in right middle lobe,no pneumonia,3.0,2.0
+20,single view chest radiograph,PA and lateral view chest radiograph,3.0,1.0
+21,subtle opacity at the left lung base,lung clear with no subtle opacity,3.0,2.0
+22,enlarged cardiac silhouette,Normal cardiac silhouette,3.0,1.0
+23,elevation of pulmonary venous pressure,Normal pulmonary venous pressure,3.0,3.0
+24,moderate - to - severe cardiomegaly,Normal size heart,3.0,2.0
+25,lo lung volume,Normal lung volume,3.0,3.0
+26,patchy middle lobe opacity,Clear middle lobe,3.0,1.0
+27,lung well inflate and clear,Bibasal interstitial opacity extensive,3.0,2.0
+28,heart appear normal in size,heart be mildly to moderately enlarge,3.0,2.0
+29,New opacity in left mid and low lung,no new opacity,3.0,2.0
+30,nasogastric tube remove,nasogastric tube still present,3.0,1.0
+31,esophageal perforation,no perforation,3.0,3.0
+32,heart size be normal,Cardiac silhouette remain enlarged,3.0,3.0
+33,dense right upper lobe airspace consolidation,no airspace consolidation,3.0,2.0
+34,hyperinflated lung with flattening of the hemidiaphragm,clear lung,3.0,1.0
+35,high sensitivity for detect pneumothorax,low sensitivity for detect pneumothorax due to supine technique,3.0,2.0
+36,pulmonary nodule,no pulmonary nodule,3.0,3.0
+37,Clear basal parenchyma,basal atelectasis,3.0,3.0
+38,worsen opacification in left retrocardiac region,no significant change,3.0,3.0
+39,PICC terminate in low SVC,PICC absent or not in low SVC,3.0,1.0
+40,mild cardiomegaly,significant cardiomegaly,3.0,1.0
+41,opacity concern for pneumonia,no evidence of pneumonia,3.0,1.0
+42,lung be mostly clear,"bibasilar opacity , lung mass",3.0,2.0
+43,"clear lung without consolidation , effusion , or pneumothorax",right low lobe pneumonia,3.0,1.0
+44,interstitial abnormality with vascular congestion,no interstitial abnormality or congestion,3.0,1.0
+45,Multilevel spinal degenerative change,Normal spinal structure,3.0,3.0
+46,heart be mildly enlarged and unchanged,heart size be not enlarge,3.0,3.0
+47,moderate cardiomegaly,Normal cardiac silhouette,3.0,3.0
+48,right lung with residual patchy opacity,clear right lung without patchy opacity,3.0,1.0
+49,Rightward mediastinal shift,no mediastinal shift,3.0,2.0
+50,right apical opacity,no apical opacity,3.0,2.0
+51,hyperinflated lung,Normal lung inflation,3.0,1.0
+52,small bilateral pleural effusion,no pleural effusion,3.0,2.0
+53,sign of tuberculosis infection,no evidence of tuberculosis,3.0,2.0
+54,moderate - to - large right pneumothorax,no pneumothorax,3.0,1.0
+55,stable moderate pulmonary edema with bilateral pleural effusion,minimal pulmonary edema without pleural effusion,3.0,2.0
+56,low lung volume with mild bibasilar reticular opacity,normal lung volume with clear lung,3.0,2.0

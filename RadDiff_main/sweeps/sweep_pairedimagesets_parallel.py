@@ -20,7 +20,7 @@ project: {project_name}
 seed: {seed}  # random seed
 
 data:
-  name: PairedImageSets
+  name: RadDiffBench
   group1: "{item['set1']}"
   group2: "{item['set2']}"
   purity: {purity}

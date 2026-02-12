@@ -25,6 +25,16 @@ from components.proposer import (
 from components.ranker import CLIPRanker, LLMRanker, NullRanker, VLMRanker
 
 
+def format_prev_round(args, hypotheses, scores):
+    """Extracts the top 10 hypotheses and their scores from the ranked hypotheses."""
+    proposer_args = args["proposer"]
+    topk = proposer_args.get("topk", 5)
+    prev_data_str = ""
+    for i, hypotheses in enumerate(hypotheses[:topk]):
+        prev_data_str += f"Top {i + 1} Difference: {hypotheses} \n"
+        prev_data_str += f"Top {i + 1} Score: {scores[i]}\n"
+
+    return prev_data_str
 
 
 def compare_results(metrics, prev_round_results, results_dict):
